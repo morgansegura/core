@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import * as style from '@styles/config/utilities'
 import { rgba, rem } from 'polished'
+import { IFormSubmit } from './Form.interfaces'
 
 // import { FormProps } from '@config/interfaces'
 
@@ -40,9 +41,10 @@ export const FormSubmitBlock = styled.div`
 	margin-top: ${style.sp['2']};
 `
 
-export const FormSubmit = styled.button`
+export const FormSubmit = styled.button<IFormSubmit>`
 	position: relative;
 	display: flex;
+	z-index: 2px;
 	flex: 1 0 auto;
 	align-items: center;
 	justify-content: center;

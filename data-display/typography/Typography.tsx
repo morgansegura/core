@@ -14,10 +14,10 @@ import * as s from './Typography.styled'
 	- [√] accepts children
 */
 
-const Typography: FC<ITypography> = ({ children, as = 'div', variant = 'p' }) => {
+const Typography: FC<ITypography> = ({ copy, as = 'div', variant = 'p' }) => {
 	return (
 		<s.Typography as={as} variant={variant}>
-			{children}
+			{copy}
 		</s.Typography>
 	)
 }

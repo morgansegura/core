@@ -67,7 +67,7 @@ export const AccordionTrigger: FC<IAccordionTrigger> = ({ children, ref }) => {
 	)
 }
 
-const AccordionTab: FC<TAccordionTab> = ({
+export const AccordionTab: FC<TAccordionTab> = ({
 	title,
 	titleIcon,
 	actionIcon,
@@ -92,7 +92,7 @@ const AccordionTab: FC<TAccordionTab> = ({
 	)
 }
 
-const AccordionContext: FC<TAccordionItem> = ({ content, tab }) => {
+export const AccordionContext: FC<TAccordionItem> = ({ content, tab }) => {
 	const [toggle, setToggle] = useState({ open: false, close: true })
 
 	const toggleTabContent = () => {
@@ -109,6 +109,7 @@ const AccordionContext: FC<TAccordionItem> = ({ content, tab }) => {
 				titleIcon={tab?.titleIcon}
 				actionIcon={tab?.actionIcon}
 				content={tab?.content}
+				key={tab?.key}
 			/>
 			<s.AccordionContent open={toggle.open} close={toggle.close}>
 				{content &&
@@ -125,7 +126,9 @@ const Accordion: FC<IAccordionContext> = ({ items }) => {
 			<s.AccordionContainer>
 				{items &&
 					items.map((item: TAccordionItem) => (
-						<>{item && <AccordionContext key={item.key} tab={item.tab} content={item.content} />}</>
+						<Fragment key={item.key}>
+							{item && <AccordionContext tab={item.tab} content={item.content} />}
+						</Fragment>
 					))}
 			</s.AccordionContainer>
 		</s.Accordion>

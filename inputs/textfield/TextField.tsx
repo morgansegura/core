@@ -59,7 +59,7 @@ const TextField: FC<ITextField> = ({
 		<>
 			<s.TextFieldControl>
 				<s.TextField
-					className={`${focus ? 'focus' : ''}${blur ? 'blur' : ''}${error ? 'error' : ''}`}
+					className={`${focus ? 'focus' : ''}${blur ? 'blur' : ''} ${error ? 'error' : ''}`}
 					ref={inputRef}
 					focus={focus}
 					blur={blur}

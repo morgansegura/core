@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import * as style from '@styles/config/utilities'
 import { rgba, rem } from 'polished'
 
@@ -55,15 +55,6 @@ export const StyledFormSubmit = styled.button`
 	border-color: transparent;
 	border-width: 0;
 	text-transform: uppercase;
-
-	background-color: ${props =>
-		props.theme.palette.name === 'light'
-			? props.theme.palette.common.black
-			: props.theme.palette.common.white};
-	color: ${props =>
-		props.theme.palette.name === 'light'
-			? props.theme.palette.common.white
-			: props.theme.palette.common.black};
 
 	transition: all 0.3s ease-out;
 

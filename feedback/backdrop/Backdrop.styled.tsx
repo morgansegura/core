@@ -19,20 +19,17 @@ export const Backdrop = styled.div<IBackdrop>`
 	transform-origin: 50% 50%;
 	transition: all 0.3s ease-out;
 
-	${props =>
-		props.open &&
-		css`
-			z-index: ${style.zindex.high};
-			opacity: 1;
-			visibility: visible;
-			transition: all 0.3s ease-in;
-		`}
-	${props =>
-		props.close &&
-		css`
-			z-index: ${style.zindex.bottom};
-			visibility: hidden;
-			opacity: 0;
-			transition: all 0.9s ease-out;
-		`}
+	&.open {
+		z-index: ${style.zindex.high};
+		opacity: 1;
+		visibility: visible;
+		transition: all 0.3s ease-in;
+	}
+
+	&.closed {
+		z-index: ${style.zindex.bottom};
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.9s ease-out;
+	}
 `

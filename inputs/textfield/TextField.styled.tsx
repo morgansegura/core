@@ -20,7 +20,7 @@ export const Placeholder = styled.div`
 `
 export const Label = styled.div`
 	position: absolute;
-	z-inde: 2;
+	x: 2;
 	display: inline-flex;
 	top: ${rem('13px')};
 	right: ${style.sp[2]};

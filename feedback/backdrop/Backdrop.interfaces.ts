@@ -5,4 +5,5 @@ export interface IBackdrop {
 	open?: boolean
 	close?: boolean
 	onClick?: MouseEventHandler<HTMLDivElement>
+	className?: string
 }

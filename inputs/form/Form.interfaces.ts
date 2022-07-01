@@ -6,8 +6,10 @@ export interface IForm {
 	autoComplete?: string
 	title?: string
 	copy?: string
+	variant?: string
 }
 
 export interface IFormSubmit {
 	label?: ReactNode[] | ReactNode
+	variant?: string
 }

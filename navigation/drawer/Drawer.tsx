@@ -55,6 +55,7 @@ export const DrawerTrigger: FC<IDrawerTrigger> = ({ children }) => {
 			open={toggle.open}
 			close={toggle.close}
 			onClick={toggleDrawer}
+			className={`${toggle.open ? 'open' : ``} ${toggle.close ? 'close' : ``}`}
 		>
 			<>{children}</>
 		</s.DrawerTrigger>
@@ -65,21 +66,30 @@ const Drawer: FC<IDrawer> = ({ content, menu, closeIcon, direction = 'right' }) 
 	const [toggle, setToggle] = useContext(ActiveDrawerContext)
 	return (
 		<>
-			<s.DrawerFrame open={toggle.open} close={toggle.close}>
+			<s.DrawerFrame
+				open={toggle.open}
+				close={toggle.close}
+				className={`${toggle.open ? 'open' : ``} ${toggle.close ? 'close' : ``}`}
+			>
 				{content}
 			</s.DrawerFrame>
 			<Backdrop
 				open={toggle.open}
 				close={toggle.close}
+				className={`${toggle.open ? 'open' : ``} ${toggle.close ? 'close' : ``}`}
 				onClick={() => setToggle({ open: false, close: true })}
 			/>
 			<s.DrawerContainer
 				direction={direction}
 				open={toggle.open}
 				close={toggle.close}
+				className={`${toggle.open ? 'open' : ``} ${toggle.close ? 'close' : ``}`}
 				// onClick={() => setToggle({ open: false, close: true })}
 			>
-				<s.DrawerMenuClose onClick={() => setToggle({ open: false, close: true })}>
+				<s.DrawerMenuClose
+					onClick={() => setToggle({ open: false, close: true })}
+					className={`${toggle.open ? 'open' : ``} ${toggle.close ? 'close' : ``}`}
+				>
 					{closeIcon}
 				</s.DrawerMenuClose>
 				{menu}
