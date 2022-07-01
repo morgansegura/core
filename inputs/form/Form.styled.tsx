@@ -55,29 +55,7 @@ export const FormSubmit = styled.button`
 	border-width: 0;
 	text-transform: uppercase;
 
-	background-color: ${props =>
-		props.theme.palette.name === 'light'
-			? props.theme.palette.common.black
-			: props.theme.palette.common.white};
-	color: ${props =>
-		props.theme.palette.name === 'light'
-			? props.theme.palette.common.white
-			: props.theme.palette.common.black};
-
 	transition: all 0.3s ease-out;
-
-	&:hover {
-		background-color: ${props =>
-			props.theme.palette.name === 'light'
-				? rgba(props.theme.palette.common.black, 0.75)
-				: rgba(props.theme.palette.common.white, 0.75)};
-	}
-	&:active {
-		background-color: ${props =>
-			props.theme.palette.name === 'light'
-				? props.theme.palette.common.black
-				: props.theme.palette.common.white};
-	}
 `
 
 export const FormAltMessage = styled.div`
@@ -86,7 +64,6 @@ export const FormAltMessage = styled.div`
 	justify-content: center;
 	margin-top: ${style.sp['3']};
 	${style.fontSizing('18px', '30px', 600)};
-	color: ${props => props.theme.palette.text.main};
 
 	a {
 		border-radius: ${style.radius.md};
@@ -95,32 +72,8 @@ export const FormAltMessage = styled.div`
 		padding-left: ${style.sp['1.5']};
 		${style.fontSizing('14px', '34px', 600)};
 		background-color: transparent;
-		border: 1px solid
-			${props =>
-				props.theme.palette.name === 'light'
-					? props.theme.palette.neutral['07']
-					: props.theme.palette.neutral['06']};
-		color: ${props =>
-			props.theme.palette.name === 'light'
-				? props.theme.palette.neutral['80']
-				: props.theme.palette.neutral['80']};
-
+		border: 1px solid transparent;
 		transition: all 0.3s ease-out;
-
-		&:hover {
-			color: ${props =>
-				props.theme.palette.name === 'light'
-					? props.theme.palette.common.white
-					: props.theme.palette.common.white};
-			border-color: ${props =>
-				props.theme.palette.name === 'light'
-					? props.theme.palette.secondary.main
-					: props.theme.palette.secondary.dark};
-			background-color: ${props =>
-				props.theme.palette.name === 'light'
-					? props.theme.palette.secondary.main
-					: props.theme.palette.secondary.main};
-		}
 	}
 `
 

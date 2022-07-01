@@ -1,17 +1,12 @@
 import { FC } from 'react'
-// [Core]
-import { Container } from 'core/layout'
+
 // [Interfaces]
 import { IAppBar } from './AppBar.interfaces'
 // [Styles]
-import { AppBarContainer } from './AppBar.styled'
+import * as s from './AppBar.styled'
 
 const AppBar: FC<IAppBar> = ({ children }) => {
-	return (
-		<AppBarContainer>
-			<Container>{children}</Container>
-		</AppBarContainer>
-	)
+	return <s.AppBar>{children}</s.AppBar>
 }
 
 export default AppBar

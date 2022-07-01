@@ -15,3 +15,10 @@ export interface ITextField {
 	blur?: boolean
 	ref?: any
 }
+
+export interface IInput {
+	error?: boolean
+	success?: boolean
+	focus?: boolean
+	blur?: boolean
+}

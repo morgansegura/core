@@ -8,40 +8,6 @@ import {
 	IAccordion,
 } from './Accordion.interfaces'
 
-export const ScrollBar = css`
-	/* width */
-	&::-webkit-scrollbar {
-		width: 10px;
-	}
-
-	/* Track */
-	&::-webkit-scrollbar-track {
-		background-color: ${props =>
-			props.theme.palette.name === 'light' ? style.colors.neutral80 : style.colors.neutral50};
-
-		border-radius: ${style.radius.sm};
-	}
-
-	/* Handle */
-	&::-webkit-scrollbar-thumb {
-		border-radius: ${style.radius.sm};
-		border: 1px solid;
-		border-color: ${props =>
-			props.theme.palette.name === 'light' ? style.colors.neutral80 : style.colors.neutral40};
-		background-color: ${props =>
-			props.theme.palette.name === 'light' ? style.colors.neutral05 : style.colors.neutral70};
-
-		transition: all 0.3s ease-out;
-
-		&:hover {
-			border-color: ${props =>
-				props.theme.palette.name === 'light' ? style.colors.neutral80 : style.colors.neutral50};
-			background-color: ${props =>
-				props.theme.palette.name === 'light' ? style.colors.neutral00 : style.colors.neutral80};
-		}
-	}
-`
-
 export const Accordion = styled.div`
 	position: relative;
 	display: flex;
@@ -99,13 +65,13 @@ export const AccordionContent = styled.div<TAccordionContent>`
 	display: flex;
 	flex-direction: column;
 	overflow-y: scroll;
-	transition: overflow 0.3s ease-out;
+	transition: all 0.3s ease-out;
 
 	${props =>
 		props.open &&
 		`
 	    overflow: visible;
-        height: 100%;
+        height: unset;
     `}
 	${props =>
 		props.close &&

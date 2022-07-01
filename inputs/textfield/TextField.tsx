@@ -58,7 +58,13 @@ const TextField: FC<ITextField> = ({
 	return (
 		<>
 			<s.TextFieldControl>
-				<s.TextField ref={inputRef} focus={focus} blur={blur} error={error}>
+				<s.TextField
+					className={`${focus ? 'focus' : ''}${blur ? 'blur' : ''}${error ? 'error' : ''}`}
+					ref={inputRef}
+					focus={focus}
+					blur={blur}
+					error={error}
+				>
 					{label && focus && <s.Label>{label}</s.Label>}
 					{placeholder && <s.Placeholder>{placeholder}</s.Placeholder>}
 					<s.Input
