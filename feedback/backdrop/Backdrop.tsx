@@ -11,7 +11,7 @@ const Backdrop: FC<IBackdrop> = ({ children, close, open, onClick, className }) 
 			onClick={onClick}
 			open={open}
 			close={close}
-			className={`${open ? 'open' : ``} ${close ? 'close' : ``}`}
+			className={`${open ? 'open' : ``}${close ? 'close' : ``}`}
 		>
 			{children}
 		</s.Backdrop>

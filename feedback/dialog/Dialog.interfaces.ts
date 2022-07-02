@@ -1,13 +1,17 @@
 import { MouseEventHandler, ReactNode } from 'react'
 
-export interface IDialog {
+export type TDialog = {
 	open?: boolean
 	close?: boolean
+}
+export interface IDialog {
+	toggle?: TDialog
 	closeIcon?: ReactNode[] | ReactNode
 	content?: ReactNode[] | ReactNode
 	title?: ReactNode[] | ReactNode
 	direction?: string
 	menu?: ReactNode[] | ReactNode
+	setToggle?: any
 }
 
 export interface IDialogContainer {

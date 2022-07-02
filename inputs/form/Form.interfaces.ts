@@ -1,4 +1,4 @@
-import { FormEventHandler, ReactNode } from 'react'
+import { FormEventHandler, MouseEventHandler, ReactNode } from 'react'
 
 export interface IForm {
 	children?: ReactNode[] | ReactNode
@@ -12,4 +12,5 @@ export interface IForm {
 export interface IFormSubmit {
 	label?: ReactNode[] | ReactNode
 	variant?: string
+	onClick?: MouseEventHandler<HTMLButtonElement>
 }

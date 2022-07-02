@@ -12,6 +12,7 @@ const TextField: FC<ITextField> = ({
 	watch,
 	errors,
 	error,
+	success,
 	name,
 	placeholder,
 	type,
@@ -57,16 +58,22 @@ const TextField: FC<ITextField> = ({
 
 	return (
 		<>
-			<s.TextFieldControl>
+			<s.TextFieldControl
+				className={`${focus ? 'focus' : ''}${blur ? 'blur' : ''} ${error ? 'error' : ''}${
+					success ? 'success' : ''
+				} `}
+			>
 				<s.TextField
-					className={`${focus ? 'focus' : ''}${blur ? 'blur' : ''} ${error ? 'error' : ''}`}
+					className={`${focus ? 'focus' : ''}${blur ? 'blur' : ''} ${error ? 'error' : ''}${
+						success ? 'success' : ''
+					} `}
 					ref={inputRef}
 					focus={focus}
 					blur={blur}
 					error={error}
 				>
-					{label && focus && <s.Label>{label}</s.Label>}
-					{placeholder && <s.Placeholder>{placeholder}</s.Placeholder>}
+					<s.Label>{label}</s.Label>
+					<s.Placeholder>{placeholder}</s.Placeholder>
 					<s.Input
 						name={name}
 						onFocus={onFocus}

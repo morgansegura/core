@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { MouseEventHandler, ReactNode } from 'react'
 
 export interface IList {
 	children?: ReactNode[] | ReactNode
@@ -15,4 +15,5 @@ export interface IListItemText {
 
 export interface IListItemAvatar {
 	children?: ReactNode[] | ReactNode
+	onClick?: any
 }

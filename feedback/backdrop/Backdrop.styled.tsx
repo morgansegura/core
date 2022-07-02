@@ -26,7 +26,7 @@ export const Backdrop = styled.div<IBackdrop>`
 		transition: all 0.3s ease-in;
 	}
 
-	&.closed {
+	&.close {
 		z-index: ${style.zindex.bottom};
 		visibility: hidden;
 		opacity: 0;
