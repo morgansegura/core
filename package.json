@@ -2,11 +2,25 @@
   "name": "core",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "19"
+  },
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "codegen:clamp": "ts-node scripts/codegen-clamp.ts",
+    "codegen:core": "ts-node scripts/codegen-core.ts",
+    "codegen:ui": "ts-node scripts/codegen-ui.ts",
+    "dev": "next dev",
+    "format": "prettier --write .",
+    "lint:css": "stylelint --cache --cache-location ./node_modules/.cache/stylelint \"app/**/*.css\"",
+    "lint:js": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint": "run-p lint:*",
+    "prepare": "husky install",
+    "release": "ts-node scripts/release.ts",
     "start": "next start",
-    "lint": "next lint"
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc -b"
   },
   "dependencies": {
     "next": "14.0.4",
@@ -14,15 +28,41 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.6",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/dompurify": "^3.0.5",
+    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
+    "@types/prettier": "^3.0.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.1.0",
     "autoprefixer": "^10.0.1",
+    "calver": "^22.9.1",
+    "chromatic": "^10.2.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "husky": "^8.0.3",
+    "jsdom": "^23.0.1",
     "postcss": "^8",
+    "prettier": "^3.1.1",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^4.2.2",
+    "vitest": "^1.1.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint"
+    ],
+    "*.css": [
+      "stylelint --fix"
+    ]
   }
 }
