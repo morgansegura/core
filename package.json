@@ -8,8 +8,6 @@
   "scripts": {
     "build": "next build",
     "codegen:clamp": "ts-node scripts/codegen-clamp.ts",
-    "codegen:component": "ts-node scripts/codegen-component.ts",
-    "codegen:core": "ts-node scripts/codegen-core.ts",
     "codegen:layout": "ts-node scripts/codegen-layout.ts",
     "codegen:preview": "ts-node scripts/codegen-preview.ts",
     "codegen:ui": "ts-node scripts/codegen-component.ts",

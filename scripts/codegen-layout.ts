@@ -48,7 +48,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 type Story = StoryObj<typeof ${name}>;
 
 export default {
-  title: "Components/${name}",
+  title: "Components/Layout/${name}",
   component: ${name},
 } satisfies Meta<typeof ${name}>;
 

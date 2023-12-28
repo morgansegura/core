@@ -3,7 +3,7 @@
 import { type QueryResponseInitial, useQuery } from "@sanity/react-loader";
 
 import { POSTS_QUERY } from "@/sanity/lib/queries";
-import { Posts } from "@/app/components/posts/Posts";
+import { Posts } from "@/app/components/preview/posts/Posts";
 
 import type { SanityDocument } from "next-sanity";
 

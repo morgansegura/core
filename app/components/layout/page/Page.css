@@ -1,0 +1,15 @@
+.Page {
+  @apply flex flex-col h-screen;
+}
+.PageHeader {
+  @apply text-inherit;
+}
+.PageBody {
+  @apply flex-1;
+}
+.PageSection {
+  @apply text-inherit;
+}
+.PageFooter {
+  @apply text-inherit;
+}

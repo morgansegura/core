@@ -3,8 +3,8 @@ import { draftMode } from "next/headers";
 import { POSTS_QUERY, POST_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 import { loadQuery } from "@/sanity/lib/store";
-import { Post } from "@/app/components/post/Post";
-import { PostPreview } from "@/app/components/post/PostPreview";
+import { Post } from "@/app/components/preview/post/Post";
+import { PostPreview } from "@/app/components/preview/post/PostPreview";
 
 import type { QueryParams, SanityDocument } from "next-sanity";
 

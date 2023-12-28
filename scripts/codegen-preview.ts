@@ -103,7 +103,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 type Story = StoryObj<typeof ${name}>;
 
 export default {
-  title: "Components/${name}",
+  title: "Components/Preview/${name}",
   component: ${name},
 } satisfies Meta<typeof ${name}>;
 
@@ -118,7 +118,7 @@ export const Default: Story = {
 
 const name = process.argv.slice(2)[0];
 const directory = name.charAt(0).toLowerCase() + name.slice(1);
-const output = path.join.bind(path, __dirname, "../app/components");
+const output = path.join.bind(path, __dirname, "../app/components/preview");
 
 async function run() {
   try {

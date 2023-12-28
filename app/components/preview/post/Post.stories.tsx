@@ -7,7 +7,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 type Story = StoryObj<typeof Post>;
 
 export default {
-  title: "Components/Post",
+  title: "Components/Preview/Post",
   component: Post,
 } satisfies Meta<typeof Post>;
 

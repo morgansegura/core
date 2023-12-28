@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import { draftMode } from "next/headers";
 
+import { sansfont } from "@/app/fonts";
 import VisualEditing from "@/app/components/VisualEditing";
 
 import "./globals.css";
@@ -20,7 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${sansfont.variable}`}>
+      <head>
+        <link rel="icon" href="/docs/icon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="/docs/icon-192x192.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/docs/icon-180x180.png" />
+        <meta name="msapplication-TileImage" content="/docs/icon-270x270.png" />
+      </head>
       <body className={inter.className}>
         {children}
         {draftMode().isEnabled && <VisualEditing />}
