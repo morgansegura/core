@@ -66,6 +66,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [capitalizeFirst],
+  plugins: [capitalizeFirst, require("@tailwindcss/typography")],
 };
 export default config;

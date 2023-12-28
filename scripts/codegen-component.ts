@@ -63,7 +63,7 @@ export const Default: Story = {
 
 const name = process.argv.slice(2)[0];
 const directory = name.charAt(0).toLowerCase() + name.slice(1);
-const output = path.join.bind(path, __dirname, "../app/components/ui");
+const output = path.join.bind(path, __dirname, "../app/components");
 
 async function run() {
   try {

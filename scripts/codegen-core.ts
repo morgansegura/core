@@ -26,6 +26,7 @@ describe("${name}", () => {
 `;
 
 const COMPONENT_TEMPLATE = (name: string) => `
+
 import "./${name}.css";
 
 import type { ReactNode } from "react";

@@ -23,7 +23,12 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/app/api/*": ["./app/api/*"],
+      "@/app/components/*": ["./app/components/*"],
+      "@/app/hooks/*": ["./app/hooks/*"],
+      "@/app/utils/*": ["./app/utils/*"],
+      "@/public/*": ["./public/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
