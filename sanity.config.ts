@@ -7,10 +7,10 @@ import { presentationTool } from "@sanity/presentation";
 import { deskTool } from "sanity/desk";
 import { defineConfig } from "sanity";
 
-import { locate } from "@/sanity/presentation/locate";
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "@/sanity/env";
 import { schema } from "@/sanity/schema";
+import { locate } from "@/sanity/presentation/locate";
 
 export default defineConfig({
   basePath: "/studio",

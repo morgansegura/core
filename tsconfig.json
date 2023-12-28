@@ -28,6 +28,7 @@
       "@/app/components/*": ["./app/components/*"],
       "@/app/hooks/*": ["./app/hooks/*"],
       "@/app/utils/*": ["./app/utils/*"],
+      "@/sanity/*": ["./sanity/*"],
       "@/public/*": ["./public/*"],
     }
   },
