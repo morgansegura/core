@@ -1,0 +1,205 @@
+.ButtonGroup {
+  @apply flex gap-2;
+}
+
+.Button {
+  @apply font-sans text-inherit rounded-md focus-within:outline-sky-200 focus-within:outline-2 transition-colors duration-300 ease-out;
+}
+/* Size
+  * contained, outlined, text
+ */
+
+.Buton[data-size="xs"] {
+  @apply text-xs leading-normal;
+}
+.Buton[data-size="sm"] {
+}
+.Buton[data-size="md"] {
+}
+.Buton[data-size="lg"] {
+}
+.Buton[data-size="xl"] {
+}
+
+/* Variant
+  * contained, outlined, text
+ */
+/* [Contained] */
+.Button[data-variant="contained"][data-color="error"] {
+  @apply bg-red-500;
+}
+.Button[data-variant="contained"][data-color="error"]:hover {
+  @apply bg-red-400;
+}
+.Button[data-variant="contained"][data-color="error"]:active {
+  @apply bg-red-700;
+}
+.Button[data-variant="contained"][data-color="inherit"] {
+  @apply bg-inherit;
+}
+.Button[data-variant="contained"][data-color="info"] {
+  @apply bg-sky-500 text-white;
+}
+.Button[data-variant="contained"][data-color="info"]:hover {
+  @apply bg-sky-400;
+}
+.Button[data-variant="contained"][data-color="info"]:active {
+  @apply bg-sky-700;
+}
+.Button[data-variant="contained"][data-color="success"] {
+  @apply bg-green-500;
+}
+.Button[data-variant="contained"][data-color="success"]:hover {
+  @apply bg-green-400;
+}
+.Button[data-variant="contained"][data-color="success"]:active {
+  @apply bg-green-700;
+}
+.Button[data-variant="contained"][data-color="secondary"] {
+  @apply bg-secondary;
+}
+.Button[data-variant="contained"][data-color="secondary"]:hover {
+  @apply bg-secondary-light;
+}
+.Button[data-variant="contained"][data-color="secondary"]:active {
+  @apply bg-secondary-dark;
+}
+.Button[data-variant="contained"][data-color="warning"] {
+  @apply bg-orange-500;
+}
+.Button[data-variant="contained"][data-color="warning"]:hover {
+  @apply bg-orange-400;
+}
+.Button[data-variant="contained"][data-color="warning"]:active {
+  @apply bg-orange-700;
+}
+.Button[data-variant="contained"][data-color="dark"] {
+  @apply bg-neutral-900;
+}
+.Button[data-variant="contained"][data-color="dark"]:hover {
+  @apply bg-neutral-800;
+}
+.Button[data-variant="contained"][data-color="dark"]:active {
+  @apply bg-black;
+}
+.Button[data-variant="contained"][data-color="light"] {
+  @apply bg-white text-neutral-900;
+}
+.Button[data-variant="contained"][data-color="light"]:hover {
+  @apply bg-neutral-50;
+}
+.Button[data-variant="contained"][data-color="light"]:active {
+  @apply bg-neutral-100;
+}
+
+/* [Text] */
+.Button[data-variant="text"][data-color="error"],
+.Button[data-variant="outlined"][data-color="error"] {
+  @apply text-red-500;
+}
+.Button[data-variant="text"][data-color="error"]:hover,
+.Button[data-variant="outlined"][data-color="error"]:hover {
+  @apply text-red-400;
+}
+.Button[data-variant="text"][data-color="error"]:active,
+.Button[data-variant="outlined"][data-color="error"]:active {
+  @apply text-red-700;
+}
+.Button[data-variant="text"][data-color="inherit"],
+.Button[data-variant="outlined"][data-color="inherit"] {
+  @apply text-inherit;
+}
+.Button[data-variant="text"][data-color="info"],
+.Button[data-variant="outlined"][data-color="info"] {
+  @apply text-sky-500;
+}
+.Button[data-variant="text"][data-color="info"]:hover,
+.Button[data-variant="outlined"][data-color="info"]:hover {
+  @apply text-sky-400;
+}
+.Button[data-variant="text"][data-color="info"]:active,
+.Button[data-variant="outlined"][data-color="info"]:active {
+  @apply text-sky-700;
+}
+.Button[data-variant="text"][data-color="success"],
+.Button[data-variant="outlined"][data-color="success"] {
+  @apply text-green-500;
+}
+.Button[data-variant="text"][data-color="success"]:hover,
+.Button[data-variant="outlined"][data-color="success"]:hover {
+  @apply text-green-400;
+}
+.Button[data-variant="text"][data-color="success"]:active,
+.Button[data-variant="outlined"][data-color="success"]:active {
+  @apply text-green-700;
+}
+.Button[data-variant="text"][data-color="secondary"],
+.Button[data-variant="outlined"][data-color="secondary"] {
+  @apply text-secondary;
+}
+.Button[data-variant="text"][data-color="secondary"]:hover,
+.Button[data-variant="outlined"][data-color="secondary"]:hover {
+  @apply text-secondary-light;
+}
+.Button[data-variant="text"][data-color="secondary"]:active,
+.Button[data-variant="outlined"][data-color="secondary"]:active {
+  @apply text-secondary-dark;
+}
+.Button[data-variant="text"][data-color="warning"],
+.Button[data-variant="outlined"][data-color="warning"] {
+  @apply text-orange-500;
+}
+.Button[data-variant="text"][data-color="warning"]:hover,
+.Button[data-variant="outlined"][data-color="warning"]:hover {
+  @apply text-orange-400;
+}
+.Button[data-variant="text"][data-color="warning"]:active,
+.Button[data-variant="outlined"][data-color="warning"]:active {
+  @apply text-orange-700;
+}
+.Button[data-variant="text"][data-color="dark"],
+.Button[data-variant="outlined"][data-color="dark"] {
+  @apply text-neutral-900;
+}
+.Button[data-variant="text"][data-color="dark"]:hover,
+.Button[data-variant="outlined"][data-color="dark"]:hover {
+  @apply text-neutral-800;
+}
+.Button[data-variant="text"][data-color="dark"]:active,
+.Button[data-variant="outlined"][data-color="dark"]:active {
+  @apply text-black;
+}
+.Button[data-variant="text"][data-color="light"],
+.Button[data-variant="outlined"][data-color="light"] {
+  @apply text-white text-neutral-900;
+}
+.Button[data-variant="text"][data-color="light"]:hover,
+.Button[data-variant="outlined"][data-color="light"]:hover {
+  @apply text-neutral-50;
+}
+.Button[data-variant="text"][data-color="light"]:active,
+.Button[data-variant="outlined"][data-color="light"]:active {
+  @apply text-neutral-100;
+}
+
+.Button.Loading {
+  /* @apply inline-block animation-loading-text content-['']; */
+}
+
+@keyframes dotty {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  }
+}

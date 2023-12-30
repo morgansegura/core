@@ -25,7 +25,7 @@ const config: StorybookConfig = {
     name: "@storybook/nextjs",
     options: {},
   },
-  staticDirs: ["../public", "../app"],
+  staticDirs: ["../public", "../app/styles"],
   docs: {
     autodocs: "tag",
   },

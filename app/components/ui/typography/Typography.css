@@ -1,0 +1,71 @@
+.Typography {
+  @apply text-inherit;
+}
+
+/* [Boldness] */
+.Typography[data-bold="extralight"] {
+  @apply font-extralight;
+}
+.Typography[data-bold="light"] {
+  @apply font-light;
+}
+.Typography[data-bold="thin"] {
+  @apply font-thin;
+}
+.Typography[data-bold="normal"] {
+  @apply font-normal;
+}
+.Typography[data-bold="medium"] {
+  @apply font-medium;
+}
+.Typography[data-bold="semibold"] {
+  @apply font-semibold;
+}
+.Typography[data-bold="bold"],
+.Typography[data-appearance="b"],
+.Typography[data-appearance="strong"] {
+  @apply font-bold;
+}
+.Typography[data-bold="black"] {
+  @apply font-black;
+}
+
+/* [Line Height] */
+.Typography[data-leading="none"] {
+  @apply leading-none;
+}
+.Typography[data-leading="tight"] {
+  @apply leading-tight;
+}
+.Typography[data-leading="snug"] {
+  @apply leading-snug;
+}
+.Typography[data-leading="normal"] {
+  @apply leading-normal;
+}
+.Typography[data-leading="relaxed"] {
+  @apply leading-relaxed;
+}
+.Typography[data-leading="loose"] {
+  @apply leading-loose;
+}
+/* [Letter Spacing] */
+.Typography[data-spacing="tighter"] {
+  @apply tracking-tighter;
+}
+.Typography[data-spacing="tight"] {
+  @apply tracking-tight;
+}
+.Typography[data-spacing="normal"] {
+  @apply tracking-normal;
+}
+.Typography[data-spacing="wide"] {
+  @apply tracking-wide;
+}
+.Typography[data-spacing="wider"] {
+  @apply tracking-wider;
+}
+.Typography[data-spacing="widest"] {
+  @apply tracking-widest;
+}
+/* [Weight] */

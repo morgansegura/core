@@ -1,12 +1,21 @@
 import type { Preview } from "@storybook/react";
 
-import "../app/globals.css";
+import { sansfont } from "../app/fonts";
+import "../app/styles/globals.css";
+import React from "react";
 
 const preview: Preview = {
+  decorators: [
+    (Story) => (
+      <html className={`${sansfont.variable}`}>
+        <Story />
+      </html>
+    ),
+  ],
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     chromatic: {
-      viewports: [400, 800, 1400],
+      viewports: [640, 768, 1024, 1280, 1536],
     },
     controls: {
       matchers: {
@@ -19,7 +28,7 @@ const preview: Preview = {
         order: [
           "Components/Core",
           "Components/UI",
-          "ComponentsLayout",
+          "Components/Layout",
           "Components/Pages",
           "Pages",
         ],

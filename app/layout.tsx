@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import { draftMode } from "next/headers";
 
 import { sansfont } from "@/app/fonts";
@@ -7,8 +6,6 @@ import VisualEditing from "@/app/components/VisualEditing";
 import "./globals.css";
 
 import type { Metadata } from "next";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,8 +24,9 @@ export default function RootLayout({
         <link rel="icon" href="/docs/icon-192x192.png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/docs/icon-180x180.png" />
         <meta name="msapplication-TileImage" content="/docs/icon-270x270.png" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
       </head>
-      <body className={inter.className}>
+      <body>
         {children}
         {draftMode().isEnabled && <VisualEditing />}
       </body>

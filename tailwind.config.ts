@@ -27,6 +27,9 @@ const config: Config = {
       "2xl": "1536px",
     },
     extend: {
+      animation: {
+        "loading-text": "dotty steps(1,end) 1s infinite",
+      },
       fontFamily: {
         sans: [
           "var(--fontsans)",
