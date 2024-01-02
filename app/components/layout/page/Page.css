@@ -10,44 +10,9 @@
 .PageSection {
   @apply text-inherit;
 }
+.PageSection[data-container] {
+  @apply w-full max-w-8xl mx-auto px-2 md:px-4 lg:px-8 2xl:px-[unset];
+}
 .PageFooter {
   @apply text-inherit;
 }
-
-.PageSection[data-appearance="prose"] {
-  @apply mx-auto max-w-lg;
-}
-
-.PageSection[data-appearance="prose"] h1,
-.PageSection[data-appearance="prose"] .Typography[data-appearance="h1"] {
-  @apply text-4xl font-bold font-serif;
-}
-.PageSection[data-appearance="prose"] h2,
-.PageSection[data-appearance="prose"] .Typography[data-appearance="h2"] {
-  @apply text-2xl font-normal mt-2 tracking-wide;
-}
-.PageSection[data-appearance="prose"] h3,
-.PageSection[data-appearance="prose"] .Typography[data-appearance="h3"] {
-  @apply text-xl font-semibold;
-}
-.PageSection[data-appearance="prose"] h4,
-.PageSection[data-appearance="prose"] .Typography[data-appearance="h4"] {
-  @apply text-lg font-bold;
-}
-.PageSection[data-appearance="prose"] h5,
-.PageSection[data-appearance="prose"] .Typography[data-appearance="h5"] {
-  @apply text-base font-semibold;
-}
-.PageSection[data-appearance="prose"] h6,
-.PageSection[data-appearance="prose"] .Typography[data-appearance="h6"] {
-  @apply text-base uppercase tracking-wide;
-}
-
-/* .Page[data-variant="layout"] {
-}
-.Page[data-variant="dashboard"] {
-}
-.Page[data-variant="store"] {
-}
-.Page[data-variant="document"] {
-} */

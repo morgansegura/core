@@ -9,6 +9,7 @@ export interface PageSectionProps {
   children?: ReactNode;
   className?: string;
   component?: ElementType;
+  container?: boolean;
   appearance?: TypographyLayoutProp;
 }
 
@@ -17,10 +18,12 @@ export function PageSection({
   children,
   className,
   component = "section",
+  container = false,
 }: PageSectionProps) {
   const Component = component;
   const baseProps = {
     "data-appearance": appearance,
+    "data-container": `${container}`,
     className: clsx("PageSection", className),
   };
   return <Component {...baseProps}>{children}</Component>;

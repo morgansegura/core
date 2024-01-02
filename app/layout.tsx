@@ -3,7 +3,7 @@ import { draftMode } from "next/headers";
 import { sansfont } from "@/app/fonts";
 import VisualEditing from "@/app/components/VisualEditing";
 
-import "./globals.css";
+import "./styles/globals.css";
 
 import type { Metadata } from "next";
 

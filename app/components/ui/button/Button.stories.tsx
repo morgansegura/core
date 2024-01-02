@@ -14,18 +14,25 @@ export default {
 
 export const Default: Story = {
   render: () => (
-    <Page appearance="prose">
-      <Typography component="h1" appearance="h3">
-        Contained
-      </Typography>
-      <ButtonGroup>
-        <Button component="button" variant="contained" color="error" size="xs">
-          Contained Error
-        </Button>
-        <Button component="button" variant="contained" color="info">
-          Contained Info
-        </Button>
-      </ButtonGroup>
+    <Page>
+      <Page.Section container={true}>
+        <Typography component="h1" appearance="h3">
+          Contained
+        </Typography>
+        <ButtonGroup>
+          <Button
+            component="button"
+            variant="contained"
+            color="error"
+            size="xs"
+          >
+            Contained Error
+          </Button>
+          <Button component="button" variant="contained" color="info">
+            Contained Info
+          </Button>
+        </ButtonGroup>
+      </Page.Section>
     </Page>
   ),
 };

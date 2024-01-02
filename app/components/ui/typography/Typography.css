@@ -68,4 +68,135 @@
 .Typography[data-spacing="widest"] {
   @apply tracking-widest;
 }
-/* [Weight] */
+/* [Size] */
+.Typography[data-size="xs"] {
+  @apply text-xs;
+}
+.Typography[data-size="sm"] {
+  @apply text-sm;
+}
+.Typography[data-size="base"] {
+  @apply text-base;
+}
+.Typography[data-size="lg"] {
+  @apply text-lg;
+}
+.Typography[data-size="xl"] {
+  @apply text-xl;
+}
+.Typography[data-size="2xl"] {
+  @apply text-2xl;
+}
+.Typography[data-size="2xl"] {
+  @apply text-2xl;
+}
+.Typography[data-size="3xl"] {
+  @apply text-3xl;
+}
+.Typography[data-size="4xl"] {
+  @apply text-4xl;
+}
+.Typography[data-size="5xl"] {
+  @apply text-5xl;
+}
+.Typography[data-size="6xl"] {
+  @apply text-6xl;
+}
+.Typography[data-size="7xl"] {
+  @apply text-7xl;
+}
+.Typography[data-size="8xl"] {
+  @apply text-8xl;
+}
+.Typography[data-size="9xl"] {
+  @apply text-9xl;
+}
+/* Text Transform */
+.Typography[data-transform="uppercase"] {
+  @apply uppercase;
+}
+.Typography[data-transform="lowercase"] {
+  @apply lowercase;
+}
+.Typography[data-transform="capitalize"] {
+  @apply capitalize;
+}
+.Typography[data-transform="normal"] {
+  @apply normal;
+}
+.Typography[data-transform="ucfirst"] {
+  @apply capitalize-first;
+}
+.Typography[data-transform="dropcap"] {
+  @apply dropcap-first;
+}
+
+/* Decoration */
+.Typography[data-decoration="line-though"] {
+  @apply line-through;
+}
+.Typography[data-decoration="overline"] {
+  @apply overline;
+}
+.Typography[data-decoration="underline"] {
+  @apply dropcap-italic;
+}
+.Typography[data-decoration="no-underline"] {
+  @apply no-underline;
+}
+/* Decoration */
+.Typography[data-style="italic"] {
+  @apply italic;
+}
+.Typography[data-style="not-italic"] {
+  @apply not-italic;
+}
+
+.Typography[data-variant="prose"] ul,
+.Typography[data-variant="prose"] ol {
+  @apply list-inside mb-6 leading-relaxed;
+}
+.Typography[data-variant="prose"] ul {
+  @apply list-disc;
+}
+.Typography[data-variant="prose"] ol {
+  @apply list-decimal;
+}
+
+/* Prose */
+.Typography[data-variant="prose"] h1,
+.Typography[data-variant="prose"][data-appearance="h1"] {
+  @apply text-5xl font-bold leading-loose;
+}
+.Typography[data-variant="prose"] h2,
+.Typography[data-variant="prose"][data-appearance="h2"] {
+  @apply text-4xl font-semibold leading-relaxed;
+}
+.Typography[data-variant="prose"] h3,
+.Typography[data-variant="prose"][data-appearance="h3"] {
+  @apply text-3xl font-semibold leading-relaxed;
+}
+.Typography[data-variant="prose"] h4,
+.Typography[data-variant="prose"][data-appearance="h4"] {
+  @apply text-2xl font-bold leading-relaxed;
+}
+.Typography[data-variant="prose"] h5,
+.Typography[data-variant="prose"][data-appearance="h5"] {
+  @apply text-2xl font-bold leading-relaxed uppercase;
+}
+.Typography[data-variant="prose"] h6,
+.Typography[data-variant="prose"][data-appearance="h6"] {
+  @apply text-xl font-bold leading-relaxed;
+}
+.Typography[data-variant="prose"] p,
+.Typography[data-variant="prose"][data-appearance="p"] {
+  @apply text-base mb-4;
+}
+
+.Typography[data-variant="prose"] hr {
+  @apply border-dashed my-4;
+}
+/* Dashboard */
+/* Layout */
+/* Store */
+/* Document */

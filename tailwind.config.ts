@@ -11,6 +11,19 @@ const capitalizeFirst = plugin(function ({ addUtilities }: unknown) {
   addUtilities(newUtilities, ["responsive", "hover"]);
 });
 
+const dropcapFirst = plugin(function ({ addUtilities }: unknown) {
+  const newUtilities = {
+    ".dropcap-first:first-letter": {
+      textTransform: "uppercase",
+      float: "left",
+      fontSize: "4.5rem",
+      paddingRight: "2rem",
+      fontWeight: "bold",
+    },
+  };
+  addUtilities(newUtilities, ["responsive", "hover"]);
+});
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -69,7 +82,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [capitalizeFirst, require("@tailwindcss/typography")],
+  plugins: [capitalizeFirst, dropcapFirst],
 };
 
 export default config;
